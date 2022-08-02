@@ -4,10 +4,16 @@ import pandas as pd
 from bs4 import BeautifulSoup
 from utilities.helpers import prep_request, makedirs, write_file
 
-source = 'data_source.csv' # csv file with one column: source
-html_filename = 'test.html'
 show_board = "Yes" 
 show_staff = "Yes"
+
+source = 'data_source.csv' # csv file with one column: source
+html_filename = 'results/test.html'
+people_csv = 'results/people.csv'
+orgs_csv = 'results/orgs.csv'
+
+## Do not edit values below this line
+## Unless you mean to - then it's fine 
 
 df_orgs = pd.DataFrame(columns=['org_id', 'ein', 'org_name', 'year', 'voting_members', 'employees', 'total_revenue', 'salaries', 'total_expenses', 'rev_minus_exp', 'assets', 'highest_comp_name', 'highest_comp_title', 'highest_comp_amount'])
 df_people = pd.DataFrame(columns=['org_id', 'org_name', 'year', 'name', 'role', 'job_title', 'comp', 'reportable_comp', 'other_comp', 'total_comp'])
@@ -169,8 +175,8 @@ for su in source_urls:
 # sort dataframes; save to csv
 df_people = df_people.sort_values(['org_name', 'year'], ascending = [True, False])
 df_orgs = df_orgs.sort_values(['org_name', 'year'], ascending = [True, False])
-df_people.to_csv('people.csv', encoding='utf-8', index=False)
-df_orgs.to_csv('orgs.csv', encoding='utf-8', index=False)
+df_people.to_csv(people_csv, encoding='utf-8', index=False)
+df_orgs.to_csv(orgs_csv, encoding='utf-8', index=False)
 
 # organize and output summary
 doc_intro = '<h2>Summary of Form 990s</h2>\n\nFor more information and full reports, see ProPublica\'s <a href="https://projects.propublica.org/nonprofits/" title="ProPublica NonProfit Explorer">ProPublica Database of Form 990s</a>\n<ul>'
