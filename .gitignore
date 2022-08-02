@@ -1,0 +1,11 @@
+# directories to ignore
+__pycache__/
+results/
+
+
+# files to ignore
+geckodriver.log
+.DS_Store
+orgs.csv
+people.csv
+test.html
