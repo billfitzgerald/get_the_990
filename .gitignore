@@ -1,6 +1,7 @@
 # directories to ignore
 __pycache__/
 results/
+data/
 
 
 # files to ignore

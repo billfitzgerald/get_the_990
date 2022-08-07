@@ -7,7 +7,7 @@ from utilities.helpers import prep_request, makedirs, write_file
 show_board = "Yes" 
 show_staff = "Yes"
 
-source = 'data_source.csv' # csv file with one column: source
+source = 'data/data_source.csv' # csv file with one column: source
 html_filename = 'results/test.html'
 people_csv = 'results/people.csv'
 orgs_csv = 'results/orgs.csv'
