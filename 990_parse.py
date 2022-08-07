@@ -6,6 +6,7 @@ from utilities.helpers import prep_request, makedirs, write_file
 
 show_board = "Yes" 
 show_staff = "Yes"
+show_contractors = "Yes"
 
 source = 'data/data_source.csv' # csv file with one column: source
 html_filename = 'results/test.html'
@@ -60,6 +61,8 @@ for su in source_urls:
 	rev_minus_exp = str_to_int(rev_minus_exp, "number")
 	assets = soup.find('NetAssetsOrFundBalancesEOYAmt').text.strip()
 	assets = str_to_int(assets, "number")
+	over100k = soup.find('IndivRcvdGreaterThan100KCnt').text.strip()
+	over100k = str_to_int(over100k, "number")
 	print(f'Processing data from {org_name} for {year}\n')
 	comp_total = 0
 	comp_list = []
@@ -120,8 +123,12 @@ for su in source_urls:
 	percent_listed = round((listed_salary / employees) * 100, 3)
 	percent_salary = round((total_listed_salary / salaries) * 100, 3)
 	comp_summary = comp_summary + f'<p><b>Percent of people with listed salaries</b>: {percent_listed} %<br><b>Percent of all salaries they earn</b>: {percent_salary} %<br>' \
-								f'<b>Average compensation of people listed on Form 990</b>: ${avg_salary_listed:,}<br></p>' \
+								f'<b>Average compensation of people listed on Form 990</b>: ${avg_salary_listed:,}<br>' \
+								f'<b>Number of employees earning more than $100,000.00</b>: {over100k}<br></p>' \
 								f'<p>Average salary/compensation estimates are very rough because, in some cases, the numbers include expenses for benefits, and these costs might not be readily visible in an employee\'s paycheck.</p>'
+
+	## Get contractor info
+
 
 	## Generate summary
 	intro = ""
