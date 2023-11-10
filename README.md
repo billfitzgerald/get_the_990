@@ -14,7 +14,7 @@ If you are doing research into nonprofits, **Get the 990** is for you!
 
 # 3. Intended Use Case
 
-**Get the 990** is best used as a preliminary research tool. It is designed to be a starting point to help surface areas that look like they merit additional research. As we have all experienced, researching companies can lead us down rabbit holes. **Get the 990** is intended to make those rabbit holes easier to spot and avoid (or at least make them less shallow).
+**Get the 990** is best used as a preliminary research tool. It is designed to be a starting point to help surface areas that look like they merit additional research. As we have all experienced, researching companies can lead us down rabbit holes. **Get the 990** is intended to make those rabbit holes easier to spot and avoid (or at least make them more shallow).
 
 # 4. Plans and Next Steps
 
