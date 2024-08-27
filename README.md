@@ -2,7 +2,7 @@
 
 Parse and summarize data from ProPublica's NonProfit Explorer at https://projects.propublica.org/nonprofits/
 
-All nonporfits are required to submit Form 990s. These forms contain interesting information, but it's often buried deep in the report, and it's hard to dig out.
+All nonprofits are required to submit Form 990s. These forms contain interesting information, but it's often buried deep in the report, and it's hard to dig out.
 
 Additionally, it's not easy to compare multiple forms side by side (ie, you want to compare one org across multiple years, or you want to compare two or more orgs).
 
@@ -18,7 +18,7 @@ If you are doing research into nonprofits, **Get the 990** is for you!
 
 # 4. Plans and Next Steps
 
-**Get the 990** just scratches the surface of the data that's in a Form 990. The roadmap includes pulling out data on donation to nonprofits, and funding issued by nonprofits.
+**Get the 990** just scratches the surface of the data that's in a Form 990. The roadmap includes pulling out data on donations to nonprofits, and funding issued by nonprofits.
 
 Pull requests are welcome, as are issues and questions.
 
